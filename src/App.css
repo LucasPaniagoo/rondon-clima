@@ -1,0 +1,11 @@
+body{
+  background-image: none;
+}
+h1{
+  font-family: var(--font-title);
+  font-size: 36px;
+}
+h2{
+  font-family: var(--font-body);
+  font-size: 36px;
+}
