@@ -1,69 +1,31 @@
-# React + TypeScript + Vite
+# 🌤️ Rondonclima - Previsão do Tempo para Rondonópolis, MT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 💡 Sobre o projeto
+Este projeto exibe a previsão do tempo para a cidade de **Rondonópolis**, mostrando o clima de **hoje e dos próximos 6 dias**.  
+A aplicação foi desenvolvida como forma de praticar a integração com APIs e o uso do **TypeScript** dentro de um projeto em **React**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tecnologias Utilizadas
+- **React** ⚛️  
+- **TypeScript** 🟦  
+- **API de Clima** (Open-Meteo) 🌐  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🎯 Objetivo do Projeto
+O objetivo principal foi **praticar o consumo de APIs em conjunto com TypeScript**, unindo aprendizado prático de **tipagem estática** e manipulação de dados de uma API real.  
+Assim, o projeto serviu como um exercício para entender melhor:
+- Diferenças entre **JavaScript e TypeScript**  
+- Benefícios de um código mais tipado  
+- Estruturação de uma aplicação front-end consumindo dados externos  
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## ✍️ Considerações Finais
+Foi um projeto **desafiador**, mas também muito enriquecedor. Consegui finalizar com sucesso e fiquei bastante satisfeito com o resultado.  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Vale ressaltar a diferença marcante entre **JavaScript** e **TypeScript**:  
+- O **TS**, por ser fortemente tipado, traz mais complexidade no início, mas em contrapartida, oferece **maior segurança, clareza e robustez** no código.  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Portanto, além de consolidar conceitos de React, pude aprimorar meu entendimento sobre **APIs e TypeScript**, o que certamente será útil em projetos futuros.
