@@ -4,6 +4,7 @@ export default async function getForecast(){
     );
 
     if (!response.ok) {
+        alert("Um erro ocorreu, volte novamente em alguns minutos.");
         throw new Error("Erro ao buscar previsão do tempo");
     }
 
