@@ -24,6 +24,6 @@ Assim, o projeto serviu como um exercício para entender melhor:
 Foi um projeto **desafiador**, mas também muito enriquecedor. Consegui finalizar com sucesso e fiquei bastante satisfeito com o resultado.  
 
 Vale ressaltar a diferença marcante entre **JavaScript** e **TypeScript**:  
-- O **TS**, por ser fortemente tipado, traz mais complexidade no início, mas em contrapartida oferece **maior segurança, clareza e robustez** no código.  
+- O **TypeScript**, por ser fortemente tipado, traz mais complexidade no início, mas em contrapartida oferece **maior segurança, clareza e robustez** no código.  
 
 Portanto, além de consolidar conceitos de React pude aprimorar meu entendimento sobre **APIs e TypeScript**, o que certamente será útil em projetos futuros.
