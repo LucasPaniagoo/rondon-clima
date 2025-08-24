@@ -1,0 +1,48 @@
+.card{
+    background-color: var(--color-blueBackground);
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
+    padding: 30px 0;
+    width: 160px;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    @media screen and (max-width:430px){
+    width: 130px;
+    height: 150px;
+    padding: 10px 0;
+  }
+}
+.card > p{
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFFFFF;
+  @media screen and (max-width:430px){
+    font-size: 16px;
+  }
+}
+
+.card > img{
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @media screen and (max-width:430px){
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+.temp{
+  display: flex;
+  justify-content: space-around;
+  font-family: serif;
+  font-size: 22px;
+  color: #FFFFFF;
+  @media screen and (max-width:430px){
+    font-size: 16px;
+  }
+}
