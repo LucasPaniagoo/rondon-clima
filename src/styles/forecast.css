@@ -102,15 +102,16 @@
   border-radius: 20px;
   padding: 20px 0;
   margin: 0 auto;
+  margin-bottom: 40px;
   @media screen and (max-width:430px){
   width: 350px;
   }
 }
 .box{
   display: flex;
-  flex-wrap: wrap; /* permite quebrar linha */
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 60px;
-  justify-content: center; /* centraliza os cards */
+  justify-content: center;
   padding: 10px;
 }
