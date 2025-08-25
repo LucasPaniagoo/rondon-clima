@@ -6,13 +6,16 @@ import '../styles/forecast.css';
 import getForecast from "../services/api";
 import weatherIcons from "../assets/icons";
 
-
 interface ForecastDay {
   date: string;
   tempMax: number;
   tempMin: number;
-  code: number;
   icon: string;
+}
+interface Info {
+  latitude: number;
+  longitude: number;
+  timezone: string;
 }
 const formatDate = (dateString: string) => {
   const [, month, day] = dateString.split("-");
@@ -20,24 +23,24 @@ const formatDate = (dateString: string) => {
 };
 
 export default function Forecast(){
-  const [info, setInfo] = useState({
-    latitude: 0,
-    longitude: 0,
-    timezone: "0",
-  });
+  const [info, setInfo] = useState<Info | null>(null);
   const [forecast, setForecast] = useState<ForecastDay[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadData() {
       try {
-        const data = await getForecast();
+        const data = await getForecast({
+          latitude: -16.4708,
+          longitude: -54.6356,
+          timezone: "America/Cuiaba",
+        });
         setInfo({
           latitude: data.latitude,
           longitude: data.longitude,
           timezone: data.timezone,
         })
-        // A API retorna arrays, então precisamos "montar" os objetos dia a dia
+
         const days = data.daily.time.map((date: string, index: number) => ({
           
           date: formatDate(date),
@@ -53,7 +56,6 @@ export default function Forecast(){
         setLoading(false);
       }
     }
-
     loadData();
   }, []);
 
@@ -69,9 +71,9 @@ export default function Forecast(){
             <main className='main'>
                 <div className='selectedCity'>
                     <h1>Rondonópolis, MT</h1>
-                    <p><strong>Latitude:</strong> { info.latitude }</p>
-                    <p><strong>Longitude:</strong> { info.longitude } </p>
-                    <p><strong>Fuso Horário:</strong> {info.timezone} </p>
+                    <p><strong>Latitude:</strong> { info?.latitude }</p>
+                    <p><strong>Longitude:</strong> { info?.longitude } </p>
+                    <p><strong>Fuso Horário:</strong> {info?.timezone} </p>
                     <p><strong>Intervalo de tempo:</strong> 7 dias</p>
                 </div>
                 <div className='pattern'>
